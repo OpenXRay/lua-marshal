@@ -540,8 +540,9 @@ static const luaL_reg R[] =
 
 int luaopen_marshal(lua_State *L)
 {
-    lua_newtable(L);
-    luaL_register(L, NULL, R);
+    /*lua_newtable(L);
+    luaL_register(L, NULL, R);*/
+    luaL_register(L, "marshal", R);
     return 1;
 }
 
