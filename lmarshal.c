@@ -530,7 +530,7 @@ static int mar_clone(lua_State* L)
     return 1;
 }
 
-static const luaL_Reg R[] =
+static const luaL_Reg marshallib[] =
 {
     {"encode",      mar_encode},
     {"decode",      mar_decode},
@@ -542,7 +542,7 @@ int luaopen_marshal(lua_State *L)
 {
     /*lua_newtable(L);
     luaL_register(L, NULL, R);*/
-    luaL_register(L, "marshal", R);
+    luaL_register(L, "marshal", marshallib);
     return 1;
 }
 
